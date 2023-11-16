@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+os.system("spotdl --download-ffmpeg")
 
 clientId = os.getenv("CLIENTID")
 clientSecret = os.getenv("CLIENTSECRET")
@@ -21,7 +22,11 @@ def findTrackId(trackTitle):
     else:
         return None
     
+def downloadSong(trackId):
+    url = f"spotdl https://open.spotify.com/intl-fr/track/{trackId}"
+    os.system(url)
+    
 
 trackTitle = input("Enter a track title : ")
 trackId = findTrackId(trackTitle)
-print(trackId)
+downloadSong(trackId)
