@@ -2,3 +2,4 @@ python-dotenv==1.0.0
 spotipy==2.23.0
 spotdl==4.2.1 
 eyed3==0.9.7 
+python-telegram-bot==13.7
